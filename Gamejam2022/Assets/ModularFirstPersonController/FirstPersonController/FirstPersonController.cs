@@ -22,7 +22,7 @@ public class FirstPersonController : MonoBehaviour
 
     public Camera playerCamera;
 
-    public float fov = 60f;
+    public float fov = 80f;
     public bool invertCamera = false;
     public bool cameraCanMove = true;
     public float mouseSensitivity = 2f;
@@ -97,6 +97,7 @@ public class FirstPersonController : MonoBehaviour
     public bool enableJump = true;
     public KeyCode jumpKey = KeyCode.Space;
     public float jumpPower = 5f;
+    public float Jumpamount = 2f;
 
     // Internal Variables
     private bool isGrounded = false;
@@ -462,10 +463,11 @@ public class FirstPersonController : MonoBehaviour
     private void Jump()
     {
         // Adds force to the player rigidbody to jump
-        if (isGrounded)
+        if (Jumpamount >= 0f)
         {
             rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
-            isGrounded = false;
+            Jumpamount -= 1f;
+            Debug.Log(Jumpamount);
         }
 
         // When crouched and using toggle system, will uncrouch for a jump
@@ -687,6 +689,7 @@ public class FirstPersonController : MonoBehaviour
         GUI.enabled = fpc.enableJump;
         fpc.jumpKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Jump Key", "Determines what key is used to jump."), fpc.jumpKey);
         fpc.jumpPower = EditorGUILayout.Slider(new GUIContent("Jump Power", "Determines how high the player will jump."), fpc.jumpPower, .1f, 20f);
+        fpc.Jumpamount = EditorGUILayout.Slider(new GUIContent("Jump Amount", "Determines how many jumps that player can do."), fpc.Jumpamount, 0f, 10f);
         GUI.enabled = true;
 
         EditorGUILayout.Space();
