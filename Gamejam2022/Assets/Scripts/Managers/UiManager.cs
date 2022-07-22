@@ -5,14 +5,17 @@ using UnityEngine;
 public class UiManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    private int health;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void takendamage(int damage)
     {
-        
+        health -= damage;
+
     }
+
 }
