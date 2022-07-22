@@ -98,6 +98,7 @@ public class FirstPersonController : MonoBehaviour
     public KeyCode jumpKey = KeyCode.Space;
     public float jumpPower = 5f;
     public float Jumpamount = 2f;
+    public float Jumpamountground = 2f;
 
     // Internal Variables
     private bool isGrounded = false;
@@ -327,7 +328,7 @@ public class FirstPersonController : MonoBehaviour
         #region Jump
 
         // Gets input and calls jump method
-        if(enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
+        if(enableJump && Input.GetKeyDown(jumpKey) && Jumpamount > .5)
         {
             Jump();
         }
@@ -453,6 +454,7 @@ public class FirstPersonController : MonoBehaviour
         {
             Debug.DrawRay(origin, direction * distance, Color.red);
             isGrounded = true;
+            Jumpamount = Jumpamountground;
         }
         else
         {
@@ -463,11 +465,10 @@ public class FirstPersonController : MonoBehaviour
     private void Jump()
     {
         // Adds force to the player rigidbody to jump
-        if (Jumpamount >= 0f)
+        if (Jumpamount >= 0.5f)
         {
             rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
             Jumpamount -= 1f;
-            Debug.Log(Jumpamount);
         }
 
         // When crouched and using toggle system, will uncrouch for a jump
@@ -475,6 +476,7 @@ public class FirstPersonController : MonoBehaviour
         {
             Crouch();
         }
+        
     }
 
     private void Crouch()
@@ -689,7 +691,8 @@ public class FirstPersonController : MonoBehaviour
         GUI.enabled = fpc.enableJump;
         fpc.jumpKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Jump Key", "Determines what key is used to jump."), fpc.jumpKey);
         fpc.jumpPower = EditorGUILayout.Slider(new GUIContent("Jump Power", "Determines how high the player will jump."), fpc.jumpPower, .1f, 20f);
-        fpc.Jumpamount = EditorGUILayout.Slider(new GUIContent("Jump Amount", "Determines how many jumps that player can do."), fpc.Jumpamount, 0f, 10f);
+        fpc.Jumpamountground = EditorGUILayout.Slider(new GUIContent("Extra Jumps", "Determines how many extra jumps."), fpc.Jumpamountground, 0f, 10f);
+
         GUI.enabled = true;
 
         EditorGUILayout.Space();
