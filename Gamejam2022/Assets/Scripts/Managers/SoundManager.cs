@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-
     public static SoundManager Instance;
     private Vector3 cameraPosition;
+
+    // Weapon Clips
+    public AudioClip lasergunClip;
+    public AudioClip lasercannonClip;
+    public AudioClip chargerifleClip;
+    // Utility Clips
+    public AudioClip thrusterClip;
+    public AudioClip shieldClip;
+    public AudioClip shieldbrokenClip;
     void Awake()
     {
         Instance = this;
@@ -23,8 +31,13 @@ public class SoundManager : MonoBehaviour
         switch(weapon)
         {
             case "laser gun":
+                PlaySound(lasergunClip);
                 break;
             case "laser cannon":
+                PlaySound(lasercannonClip);
+                break;
+            case "Charge rifle":
+                PlaySound(chargerifleClip);
                 break;
 
             default:
@@ -38,10 +51,13 @@ public class SoundManager : MonoBehaviour
         switch(item)
         {
             case "Thruster":
+                PlaySound(thrusterClip);
                 break;
             case "Shield":
+                PlaySound(shieldClip);
                 break;
             case "Shield Broken":
+                PlaySound(shieldbrokenClip);
                 break;
 
             default:
