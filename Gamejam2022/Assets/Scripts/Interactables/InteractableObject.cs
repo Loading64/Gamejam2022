@@ -9,6 +9,6 @@ public class InteractableObject : MonoBehaviour
     {
         Debug.Log("Ouch");
         GetComponent<HandInteractable>().OnPlayerInteracted1();
-
+        //test
     }
 }
