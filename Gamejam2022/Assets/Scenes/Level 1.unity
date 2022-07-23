@@ -107,7 +107,7 @@ NavMeshSettings:
     serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 4
+    agentHeight: 3
     agentSlope: 60
     agentClimb: 10
     ledgeDropHeight: 10
@@ -253,7 +253,7 @@ PrefabInstance:
     - target: {fileID: 7286422360114076054, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1198603798}
+      objectReference: {fileID: 0}
     - target: {fileID: 8287669079139966795, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -301,17 +301,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
---- !u!114 &334079764 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8734511682312371314, guid: e73c50c1df163e14e8da292e5b8aed87, type: 3}
-  m_PrefabInstance: {fileID: 535616351176122795}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2291a14672f9149866c1dfdf6c9686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &400003309
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +351,16 @@ MonoBehaviour:
   thrusterClip: {fileID: 8300000, guid: 467198915d149bb4e94978421d49d06d, type: 3}
   shieldClip: {fileID: 8300000, guid: d5e3f98a7427cbd4a9f0e4d88293fb58, type: 3}
   shieldbrokenClip: {fileID: 8300000, guid: 6c6a0190b6f1c574a8ae8c83c5e941d0, type: 3}
+--- !u!4 &401157712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8023440136021349659, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
+  m_PrefabInstance: {fileID: 1621478703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &401157713 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3199108593289834346, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
+  m_PrefabInstance: {fileID: 1621478703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &422200498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,7 +376,7 @@ PrefabInstance:
     - target: {fileID: 7286422360114076054, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1198603798}
+      objectReference: {fileID: 0}
     - target: {fileID: 8287669079139966795, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -723,7 +722,7 @@ PrefabInstance:
     - target: {fileID: 7286422360114076054, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1198603798}
+      objectReference: {fileID: 0}
     - target: {fileID: 8287669079139966795, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -869,7 +868,7 @@ PrefabInstance:
     - target: {fileID: 7286422360114076054, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1198603798}
+      objectReference: {fileID: 0}
     - target: {fileID: 8287669079139966795, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1056,7 +1055,7 @@ PrefabInstance:
     - target: {fileID: 7286422360114076054, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1198603798}
+      objectReference: {fileID: 0}
     - target: {fileID: 8287669079139966795, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1124,7 +1123,7 @@ PrefabInstance:
     - target: {fileID: 7286422360114076054, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1198603798}
+      objectReference: {fileID: 0}
     - target: {fileID: 8287669079139966795, guid: 0d69292fbc993494fa422304cf5ad1d0, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1261,11 +1260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e510187bebbe24c95fcf303f8ec014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1198603798 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2042494306120558747, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
-  m_PrefabInstance: {fileID: 1621478703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1621478703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1326,14 +1320,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2042494306120558749, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
+      propertyPath: enableZoom
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2431093654424982843, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
       propertyPath: gamePlayManager
       value: 
       objectReference: {fileID: 1188820579}
+    - target: {fileID: 2431093654441492379, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
+      propertyPath: hands.Array.data[1]
+      value: 
+      objectReference: {fileID: 401157712}
     - target: {fileID: 3063018771997796874, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
       propertyPath: interactable
       value: 
-      objectReference: {fileID: 334079764}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063018771997796874, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
+      propertyPath: anim.Array.data[1]
+      value: 
+      objectReference: {fileID: 401157713}
+    - target: {fileID: 3277937860754017908, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
+      propertyPath: m_Name
+      value: handsRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7211156801861603233, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}
+      propertyPath: m_Name
+      value: handsLeft
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 001b023c499a33144a0411cb6a48ab9b, type: 3}

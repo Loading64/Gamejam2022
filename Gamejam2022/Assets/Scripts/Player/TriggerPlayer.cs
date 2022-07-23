@@ -28,9 +28,6 @@ public class TriggerPlayer : HandInteractable
             target.OnPlayerInteracted();
             Debug.Log("Interacted");
             StartCoroutine(collectanimation());
-           // anim[0].Play("Armature|HandSlot");
-
-           // anim[1].Play("Armature|HandSlot");
         }
     }
 
@@ -41,7 +38,7 @@ public class TriggerPlayer : HandInteractable
     IEnumerator collectanimation()
     {
         anim[0].Play("Armature|HandSlot");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(.75f);
         anim[1].Play("Armature|HandSlot");
     }
 
