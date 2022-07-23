@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lasergunshoot : AttackManager
+public class Lasergunshoot : MonoBehaviour
 {
     public lasergunbullet projectile;
 
