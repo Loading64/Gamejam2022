@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 8607666410229571808}
   - component: {fileID: 7091003706669727008}
   - component: {fileID: 7286422360114076054}
-  - component: {fileID: 1209531619810985374}
+  - component: {fileID: 2298185491065059587}
   m_Layer: 0
   m_Name: Melee Slime
-  m_TagString: Slime
+  m_TagString: slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,10 +83,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc3adc5b6a940645baf2dd309fbdf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
   target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
---- !u!54 &1209531619810985374
+--- !u!54 &2298185491065059587
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

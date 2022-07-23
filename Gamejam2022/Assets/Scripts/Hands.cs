@@ -11,6 +11,7 @@ public class Hands : MonoBehaviour
     void Start()
     {
         Debug.Log(hands[0]);
+        Debug.Log(hands[1]);
         child[0] = hands[0].Find("Bone").transform.Find("Bone.009");
         child[1] = hands[1].Find("Bone").transform.Find("Bone.009");
         child[0].gameObject.SetActive(false);

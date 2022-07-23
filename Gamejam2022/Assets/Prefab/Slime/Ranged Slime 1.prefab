@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1970739182534960090}
   m_Layer: 0
   m_Name: Ranged Slime 1
-  m_TagString: Untagged
+  m_TagString: slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

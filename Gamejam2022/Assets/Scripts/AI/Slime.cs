@@ -38,6 +38,5 @@ public class Slime : MonoBehaviour
         }
 
     }
-        
 
 }

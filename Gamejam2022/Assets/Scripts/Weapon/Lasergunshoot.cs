@@ -8,6 +8,16 @@ public class Lasergunshoot : MonoBehaviour
 
     public void Fire(string projectile_type)
     {
+        IEnumerator chargeriflefire()
+        {
+            Instantiate(projectile, transform.position, transform.rotation);
+            yield return new WaitForSeconds(0.12f);
+            Instantiate(projectile, transform.position, transform.rotation);
+            yield return new WaitForSeconds(0.11f);
+            Instantiate(projectile, transform.position, transform.rotation);
+            yield return new WaitForSeconds(0.15f);
+        }
+
         switch (projectile_type)
         {
             case "lasergun":
@@ -26,6 +36,11 @@ public class Lasergunshoot : MonoBehaviour
                 Debug.Log("Attack Broke");
                 Debug.Log(projectile_type + "projectile_type");
                 break;
+        }
+        if (projectile_type == "chargerifle")
+        {
+            StartCoroutine(chargeriflefire());
+
         }
 
     }
