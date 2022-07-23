@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public string Savedweapon = "laser gun";
+    public string Savedweapon = "empty";
     public string Savedutility = "empty";
     public GamePlayManager gamePlayManager;
     public void Handcollect(string handtype)

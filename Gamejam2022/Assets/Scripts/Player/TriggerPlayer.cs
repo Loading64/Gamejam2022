@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerPlayer : MonoBehaviour
+public class TriggerPlayer : HandInteractable
 {
     public Animator[] anim; //accessing animator
     public bool isCollecting = false;
@@ -18,7 +18,7 @@ public class TriggerPlayer : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         InteractableObject target = other.GetComponent<InteractableObject>();
         if (target != null)

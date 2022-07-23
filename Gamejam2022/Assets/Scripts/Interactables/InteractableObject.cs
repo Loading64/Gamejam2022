@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    public HandInteractable interactable;
     public virtual void OnPlayerInteracted()
     {
-        Debug.Log("Ouch"); 
-        Destroy(gameObject);
+        Debug.Log("Ouch");
+        GetComponent<HandInteractable>().OnPlayerInteracted1();
+
     }
 }

@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lasergunshoot : MonoBehaviour
+public class Lasergunshoot : AttackManager
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public lasergunbullet projectile;
 
-    // Update is called once per frame
-    void Update()
+    public void Fire(string projectile_type)
     {
-        
+        if (projectile_type == "lasergun")
+        {
+            Instantiate(projectile, transform.position, transform.rotation);
+            Debug.Log("Shoot!");
+        }
     }
 }
