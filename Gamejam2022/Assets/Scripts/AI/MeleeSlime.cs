@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class MeleeSlime : MonoBehaviour
+public class MeleeSlime : Slime
 {
     public Transform target;
     Vector3 destination;

@@ -6,6 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class Slime : MonoBehaviour
 {
+    public int health;
     public Transform target;
     Vector3 destination;
     NavMeshAgent agent;
@@ -26,5 +27,17 @@ public class Slime : MonoBehaviour
             destination = target.position;
             agent.destination = destination;
         }
+
     }
+    public void damagetaken(int damage)
+    {
+        health -= damage;
+        if (health <= 0.1)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+        
+
 }
