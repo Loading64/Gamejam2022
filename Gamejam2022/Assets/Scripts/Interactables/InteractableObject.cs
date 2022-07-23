@@ -7,5 +7,6 @@ public class InteractableObject : MonoBehaviour
     public virtual void OnPlayerInteracted()
     {
         Debug.Log("Ouch"); 
+        Destroy(gameObject);
     }
 }

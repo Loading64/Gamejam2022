@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TriggerPlayer : MonoBehaviour
 {
+    public Animator[] anim; //accessing animator
+    public bool isCollecting = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,17 @@ public class TriggerPlayer : MonoBehaviour
         InteractableObject target = other.GetComponent<InteractableObject>();
         if (target != null)
         {
+            isCollecting = true;
+            StartCoroutine(wait());
             target.OnPlayerInteracted();
+            Debug.Log("Interacted");
+            anim[0].Play("Armature|HandSlot");
+            anim[1].Play("Armature|HandSlot");
         }
+    }
+
+    IEnumerator wait() {
+        yield return new WaitForSeconds(3);
+        isCollecting = false;
     }
 }
