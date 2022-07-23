@@ -7,8 +7,9 @@ using UnityEngine.AI;
 public class Slime : MonoBehaviour
 {
     public Transform target;
-    Vector3 destination;
-    NavMeshAgent agent;
+    public Vector3 destination;
+    public NavMeshAgent agent;
+    public int health;
 
     void Start()
     {
