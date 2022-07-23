@@ -35,7 +35,6 @@ public class GamePlayManager : MonoBehaviour
     {
         soundManager.PlayAttackSound(weapon);
         attackmanager.FireAttack(weapon);
-        Debug.Log(weapon + "gameplaymanager");
     }
 
     private void UseUtility()
