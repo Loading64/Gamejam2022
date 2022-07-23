@@ -8,8 +8,8 @@ public class Slime : MonoBehaviour
 {
     public int health;
     public Transform target;
-    Vector3 destination;
-    NavMeshAgent agent;
+    public Vector3 destination;
+    public NavMeshAgent agent;
 
     void Start()
     {
