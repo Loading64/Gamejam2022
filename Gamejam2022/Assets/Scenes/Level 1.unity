@@ -6033,6 +6033,7 @@ MonoBehaviour:
   hands:
   - {fileID: 745105093}
   - {fileID: 2063680266}
+  triggerPlayer: {fileID: 810363795189825515}
 --- !u!1001 &1815011468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6919,6 +6920,7 @@ MonoBehaviour:
   anim:
   - {fileID: 745105095}
   - {fileID: 2063680268}
+  isCollecting: 0
 --- !u!136 &3290847076486495938
 CapsuleCollider:
   m_ObjectHideFlags: 0
