@@ -41,7 +41,7 @@ public class TriggerPlayer : HandInteractable
     IEnumerator collectanimation()
     {
         anim[0].Play("Armature|HandSlot");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         anim[1].Play("Armature|HandSlot");
     }
 
