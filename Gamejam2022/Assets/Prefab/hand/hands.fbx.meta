@@ -1,8 +1,17 @@
 fileFormatVersion: 2
-guid: a046bf683acc9f340ac311bd555f342e
+guid: 2d172c2164754364d9f8217485b625d4
 ModelImporter:
   serializedVersion: 22103
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 6943229587315232905
+    second: Armature|HandSlot
+  - first:
+      74: 7549088838577149333
+    second: Armature|Punch
+  - first:
+      74: -7453387558714718212
+    second: Armature|Shoot
   externalObjects: {}
   materials:
     materialImportMode: 2
