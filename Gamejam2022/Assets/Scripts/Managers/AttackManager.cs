@@ -23,7 +23,7 @@ public class AttackManager : MonoBehaviour
                 Debug.Log("lasercannon Attack");
                 break;
             case "Charge rifle":
-                //Fire(chargerifle)
+                lasergunscript.Fire("chargerifle");
                 Debug.Log("chargerifle Attack");
                 break;
 

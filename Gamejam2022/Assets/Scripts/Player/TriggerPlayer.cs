@@ -9,13 +9,13 @@ public class TriggerPlayer : HandInteractable
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -27,8 +27,10 @@ public class TriggerPlayer : HandInteractable
             StartCoroutine(wait());
             target.OnPlayerInteracted();
             Debug.Log("Interacted");
-            anim[0].Play("Armature|HandSlot");
-            anim[1].Play("Armature|HandSlot");
+            StartCoroutine(collectanimation());
+           // anim[0].Play("Armature|HandSlot");
+
+           // anim[1].Play("Armature|HandSlot");
         }
     }
 
@@ -36,4 +38,11 @@ public class TriggerPlayer : HandInteractable
         yield return new WaitForSeconds(3);
         isCollecting = false;
     }
+    IEnumerator collectanimation()
+    {
+        anim[0].Play("Armature|HandSlot");
+        yield return new WaitForSeconds(3);
+        anim[1].Play("Armature|HandSlot");
+    }
+
 }
