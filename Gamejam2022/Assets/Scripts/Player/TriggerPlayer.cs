@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerPlayer : MonoBehaviour
 {
+    public Animator[] anim; //accessing animator
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,9 @@ public class TriggerPlayer : MonoBehaviour
         if (target != null)
         {
             target.OnPlayerInteracted();
+            Debug.Log("Interacted");
+            anim[0].Play("Armature|HandSlot");
+            anim[1].Play("Armature|HandSlot");
         }
     }
 }

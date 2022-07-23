@@ -17,7 +17,7 @@ public class MeleeSlime : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(agent.destination);
+        //Debug.Log(agent.destination);
         // Update destination if the target moves one unit
         if (Vector3.Distance(destination, target.position) > 1.0f)
         {
