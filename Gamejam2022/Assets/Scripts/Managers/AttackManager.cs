@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackManager : MonoBehaviour
-{
+{   
+    public GameObject originpoint;
+    private Lasergunshoot lasergunscript;
+    private void Start()
+    {
+        lasergunscript = originpoint.GetComponent<Lasergunshoot>();
+    }
     public void FireAttack(string weapon)
     {
         switch (weapon)
         {
             case "laser gun":
-                //Fire(lasergun);
+                lasergunscript.Fire("lasergun");
                 Debug.Log("lasergun Attack");
                 break;
             case "laser cannon":

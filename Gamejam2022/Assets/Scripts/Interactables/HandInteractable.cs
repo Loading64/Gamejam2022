@@ -6,7 +6,7 @@ public class HandInteractable : InteractableObject
 {
     public GameObject PlayerInventory;
     public PlayerInventory PInv;
-    public override void OnPlayerInteracted()
+    public void OnPlayerInteracted1()
     {
         PInv = PlayerInventory.GetComponent<PlayerInventory>();
         Debug.Log("Hand Get");

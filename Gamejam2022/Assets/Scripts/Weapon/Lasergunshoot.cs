@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shoot : MonoBehaviour
+public class Lasergunshoot : MonoBehaviour
 {
-    public Bullet projectile;
+    public lasergunbullet projectile;
 
-    void Update()
+    public void Fire(string projectile_type)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (projectile_type == "lasergun")
         {
             Instantiate(projectile, transform.position, transform.rotation);
-
             Debug.Log("Shoot!");
         }
     }
