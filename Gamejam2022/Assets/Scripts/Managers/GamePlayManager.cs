@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class GamePlayManager : MonoBehaviour
 {
-    private string weapon;
-    private string utility;
     public SoundManager soundManager;
+    public AttackManager attackmanager;
 
+    public string weapon;
+    public string utility;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,8 @@ public class GamePlayManager : MonoBehaviour
     private void WeaponFire()
     {
         soundManager.PlayAttackSound(weapon);
+        attackmanager.FireAttack(weapon);
+        Debug.Log(weapon + "gameplaymanager");
     }
 
     private void UseUtility()

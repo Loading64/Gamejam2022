@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    string CurrentLeft = "empty";
-    string CurrentRight = "empty";
+    public string Savedweapon = "laser gun";
+    public string Savedutility = "empty";
+    public GamePlayManager gamePlayManager;
     public void Handcollect(string handtype)
     {
         Debug.Log("HandInventoryGet");
-        if (handtype == "Ranged")
+        if (handtype == "laser gun")
         {
-            CurrentRight = "ranged";
+            Savedweapon = "laser gun";
+            gamePlayManager.weapon = Savedweapon;
+            Debug.Log(Savedweapon);
         }
     }
 

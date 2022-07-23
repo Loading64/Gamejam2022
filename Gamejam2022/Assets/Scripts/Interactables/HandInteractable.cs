@@ -10,7 +10,7 @@ public class HandInteractable : InteractableObject
     {
         PInv = PlayerInventory.GetComponent<PlayerInventory>();
         Debug.Log("Hand Get");
-        PInv.Handcollect("Ranged");
+        PInv.Handcollect("laser gun");
         GameObject.Destroy(gameObject);
     }
 }
