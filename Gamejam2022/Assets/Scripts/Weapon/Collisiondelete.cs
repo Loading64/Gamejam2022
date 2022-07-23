@@ -23,7 +23,7 @@ public class Collisiondelete : MonoBehaviour
         GameObject target = other.gameObject;
         if (target.tag == "Slime")
         {
-            Destroy(target);
+            target.GetComponent<MeleeSlime>().damagetaken(1);
         }
     }
 }
