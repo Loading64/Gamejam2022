@@ -10,7 +10,7 @@ public class Slime : MonoBehaviour
     public Transform target;
     public Vector3 destination;
     public NavMeshAgent agent;
-
+    public int damage;
     void Start()
     {
         // Cache agent component and destination
@@ -37,6 +37,14 @@ public class Slime : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().TakenDamage(damage);
+        }
     }
 
 }

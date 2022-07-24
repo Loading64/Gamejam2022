@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MotherSlime : Slime
 {
-    private List<GameObject> slimelist = new List<GameObject>();
+    //private List<GameObject> slimelist = new List<GameObject>();
     public bool canSpawn = true;
     public float timeBetweenSpawns;
     public GameObject motherSlime;
@@ -13,6 +13,7 @@ public class MotherSlime : Slime
     public GameObject rangedSlime;
     void Start()
     {
+        damage = 5;
         StartCoroutine(SpawnRoutine());
         // Cache agent component and destination
         agent = GetComponent<NavMeshAgent>();
