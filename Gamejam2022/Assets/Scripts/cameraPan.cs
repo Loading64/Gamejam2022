@@ -22,6 +22,6 @@ public class cameraPan : MonoBehaviour
             transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
             yield return new WaitForSeconds(0.01f);
         }
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Tutorial");
     }
 }

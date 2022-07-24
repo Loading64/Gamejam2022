@@ -15,7 +15,7 @@ public class TriggerPlayer : HandInteractable
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(isCollecting);
     }
 
     public void OnTriggerEnter(Collider other)

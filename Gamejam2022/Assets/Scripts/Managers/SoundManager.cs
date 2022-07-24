@@ -50,7 +50,7 @@ public class SoundManager : MonoBehaviour
     {
         switch(item)
         {
-            case "Thruster":
+            case "thrust":
                 PlaySound(thrusterClip);
                 break;
             case "Shield":

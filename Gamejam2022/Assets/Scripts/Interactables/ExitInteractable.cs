@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ExitInteractable : InteractableObject
 {
+    public string Levelscene;
     public override void OnPlayerInteracted()
     {
         //base.OnPlayerInteracted();
 
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene(Levelscene);
     }
 }

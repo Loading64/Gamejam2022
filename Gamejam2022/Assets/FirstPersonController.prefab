@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1976606240199522477}
   - component: {fileID: 1976606240199522476}
   - component: {fileID: 1976606240199522479}
+  - component: {fileID: 5042938902085040497}
   - component: {fileID: 802098603451431701}
   - component: {fileID: 1976606240199522474}
   - component: {fileID: 1976606240199522475}
@@ -90,6 +91,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5042938902085040497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976606240199522465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4313aceaccc3f64e83f4a3300fc26ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  healthBar: {fileID: 0}
 --- !u!136 &802098603451431701
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -190,6 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69aa84aed7c6ae349a83ed8deffab3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
+  PlayerInventory: {fileID: 0}
+  PInv: {fileID: 0}
+  GunType: 
   anim:
   - {fileID: 2777260358245180176}
   - {fileID: 2777260357382719195}
