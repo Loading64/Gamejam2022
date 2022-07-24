@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GravityChange : MonoBehaviour
+public class GravityChange1 : MonoBehaviour
 {
     public float thrust;
     public Rigidbody rb;
@@ -10,22 +10,24 @@ public class GravityChange : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        StartCoroutine(SpawnDownThrust());
     }
-
+    public void thrustutility()
+    {
+        StartCoroutine(SpawnforwardThrust());
+    }
     // Update is called once per frame
     void Update()
     {
         
     }
-    IEnumerator SpawnDownThrust()
+    IEnumerator SpawnforwardThrust()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 1; i++)
         {
-            rb.AddRelativeForce(Vector3.down * thrust);
-            yield return new WaitForSeconds(.5f);
-            Debug.Log(i);
+            rb.AddRelativeForce(Vector3.forward * thrust);
+            yield return new WaitForSeconds(3f);
         }
     }
+
 
 }

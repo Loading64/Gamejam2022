@@ -40,6 +40,7 @@ public class GamePlayManager : MonoBehaviour
     private void UseUtility()
     {
         soundManager.PlayUtilitySound(utility);
+        attackmanager.FireUtility(utility);
     }
 
 

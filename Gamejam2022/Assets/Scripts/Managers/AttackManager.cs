@@ -5,24 +5,27 @@ using UnityEngine;
 public class AttackManager : MonoBehaviour
 {   
     public GameObject originpoint;
+    public GameObject firstpersoncontroller;
     private Lasergunshoot lasergunscript;
+    private GravityChange1 thrustscript;
     private void Start()
     {
         lasergunscript = originpoint.GetComponent<Lasergunshoot>();
+        thrustscript = firstpersoncontroller.GetComponent<GravityChange1>();
     }
     public void FireAttack(string weapon)
     {
         switch (weapon)
         {
-            case "laser gun":
+            case "lasergun":
                 lasergunscript.Fire("lasergun");
                 Debug.Log("lasergun Attack");
                 break;
-            case "laser cannon":
+            case "lasercannon":
                 //Fire(lasercannon);
                 Debug.Log("lasercannon Attack");
                 break;
-            case "Charge rifle":
+            case "chargerifle":
                 lasergunscript.Fire("chargerifle");
                 Debug.Log("chargerifle Attack");
                 break;
@@ -33,5 +36,22 @@ public class AttackManager : MonoBehaviour
                 break;
         }
     }
+    public void FireUtility(string utility)
+    {
+        switch (utility)
+        {
+            case "thrust":
+                thrustscript.thrustutility();
+                Debug.Log("thrust");
+                break;
+            default:
+                Debug.Log("utility Broke");
+                Debug.Log(utility + "UtilityManager");
+                break;
+
+        }
+
+    }
+
 
 }
