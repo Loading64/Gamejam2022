@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MotherSlime : Slime
 {
-    private List<GameObject> slimelist = new List<GameObject>();
+    //private List<GameObject> slimelist = new List<GameObject>();
     public bool canSpawn = true;
     public float timeBetweenSpawns;
     public GameObject motherSlime;
@@ -13,6 +13,7 @@ public class MotherSlime : Slime
     public GameObject rangedSlime;
     void Start()
     {
+        damage = 5;
         StartCoroutine(SpawnRoutine());
         // Cache agent component and destination
         agent = GetComponent<NavMeshAgent>();
@@ -30,6 +31,7 @@ public class MotherSlime : Slime
             case 1:
                 newEnemy = (GameObject)Instantiate(motherSlime, spawnPoint, spawnRoation);
                 newEnemy.GetComponent<MotherSlime>().target = target;
+                newEnemy.GetComponent<MotherSlime>().soundManager = soundManager;
                 break;
 
             case 2:
@@ -37,11 +39,13 @@ public class MotherSlime : Slime
             case 4:
                 newEnemy = (GameObject)Instantiate(rangedSlime, spawnPoint, spawnRoation);
                 newEnemy.GetComponent<RangedSlime>().target = target;
+                newEnemy.GetComponent<RangedSlime>().soundManager = soundManager;
                 break;
 
             default:
                 newEnemy = (GameObject)Instantiate(meleeSlime, spawnPoint, spawnRoation);
                 newEnemy.GetComponent<MeleeSlime>().target = target;
+                newEnemy.GetComponent<MeleeSlime>().soundManager = soundManager;
                 break;
         }
         //slimelist.Add(newEnemy);

@@ -1,7 +1,13 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class MeleeSlime : Slime
 {
+    void Start()
+    {
+        damage = 1;
+        // Cache agent component and destination
+        agent = GetComponent<NavMeshAgent>();
+        destination = agent.destination;
+    }
 }
