@@ -7,10 +7,11 @@ public class Collisiondelete : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         GameObject target = other.gameObject;
-        if (target.tag == "Slime")
+        if (target.tag == "slime")
         {
-            Destroy(target);
             target.GetComponent<MeleeSlime>().damagetaken(1);
+            Debug.Log("hitslime");
+            Destroy(gameObject);
         }
     }
 }

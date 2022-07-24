@@ -20,10 +20,11 @@ public class GravityChange : MonoBehaviour
     }
     IEnumerator SpawnDownThrust()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 10; i++)
         {
             rb.AddRelativeForce(Vector3.down * thrust);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(.5f);
+            Debug.Log(i);
         }
     }
 

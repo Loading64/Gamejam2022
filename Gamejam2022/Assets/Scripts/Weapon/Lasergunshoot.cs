@@ -15,7 +15,6 @@ public class Lasergunshoot : MonoBehaviour
             Instantiate(projectile, transform.position, transform.rotation);
             yield return new WaitForSeconds(0.11f);
             Instantiate(projectile, transform.position, transform.rotation);
-            yield return new WaitForSeconds(0.15f);
         }
 
         switch (projectile_type)
@@ -27,8 +26,8 @@ public class Lasergunshoot : MonoBehaviour
                 //Fire(lasercannon);
                 Debug.Log("lasercannon Attack");
                 break;
-            case "Charge rifle":
-                //Fire(chargerifle)
+            case "chargerifle":
+                chargeriflefire();
                 Debug.Log("chargerifle Attack");
                 break;
 

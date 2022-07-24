@@ -32,13 +32,13 @@ public class SoundManager : MonoBehaviour
     {
         switch(weapon)
         {
-            case "laser gun":
+            case "lasergun":
                 PlaySound(lasergunClip);
                 break;
             case "laser cannon":
                 PlaySound(lasercannonClip);
                 break;
-            case "Charge rifle":
+            case "chargerifle":
                 PlaySound(chargerifleClip);
                 break;
             case "Bonk":
