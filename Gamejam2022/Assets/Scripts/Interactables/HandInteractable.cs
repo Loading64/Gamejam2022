@@ -13,6 +13,6 @@ public class HandInteractable : InteractableObject
         PInv = PlayerInventory.GetComponent<PlayerInventory>();
         Debug.Log("Hand Get");
         PInv.Handcollect(GunType);
-        GameObject.Destroy(gameObject);
+        //GameObject.Destroy(gameObject);
     }
 }

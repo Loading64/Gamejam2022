@@ -40,6 +40,10 @@ public class TriggerPlayer : HandInteractable
         anim[0].Play("Armature|HandSlot");
         yield return new WaitForSeconds(.75f);
         anim[1].Play("Armature|HandSlot");
+        yield return new WaitForSeconds(1.5f);
+        anim[0].enabled = false;
+        anim[1].enabled = false;
+
     }
 
 }

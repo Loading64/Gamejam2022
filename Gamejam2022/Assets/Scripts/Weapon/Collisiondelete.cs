@@ -7,11 +7,22 @@ public class Collisiondelete : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         GameObject target = other.gameObject;
-        if (target.tag == "slime")
+        switch(target.tag)
         {
-            target.GetComponent<MeleeSlime>().damagetaken(1);
-            Debug.Log("hitslime");
-            Destroy(gameObject);
+            case "Melee Slime":
+                target.GetComponent<MeleeSlime>().damagetaken(1);
+                Destroy(gameObject);
+
+                break;
+            case "Ranged Slime":
+                target.GetComponent<RangedSlime>().damagetaken(1);
+                Destroy(gameObject);
+
+                break;
+            case "Mother Slime":
+                target.GetComponent<MotherSlime>().damagetaken(1);
+                Destroy(gameObject);
+                break;
         }
     }
 }

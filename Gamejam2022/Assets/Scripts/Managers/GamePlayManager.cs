@@ -22,6 +22,7 @@ public class GamePlayManager : MonoBehaviour
         {
             // Left Click
             WeaponFire();
+
         }
 
         if (Input.GetMouseButtonDown(1))
