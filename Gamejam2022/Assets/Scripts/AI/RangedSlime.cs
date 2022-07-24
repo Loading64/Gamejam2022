@@ -4,6 +4,15 @@ using UnityEngine;
 using UnityEngine.AI;
 public class RangedSlime : Slime
 {
+    void Start()
+    {
+        damage = 3;
+        // Cache agent component and destination
+        agent = GetComponent<NavMeshAgent>();
+        destination = agent.destination;
+    }
+
+
     // This Script Handle's The Tower's Targeting
 
     //public GameObject PlayerInRange;

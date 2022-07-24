@@ -85,7 +85,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-  target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  destination: {x: 0, y: 0, z: 0}
+  agent: {fileID: 0}
+  damage: 1
+  soundManager: {fileID: 0}
 --- !u!54 &2298185491065059587
 Rigidbody:
   m_ObjectHideFlags: 0

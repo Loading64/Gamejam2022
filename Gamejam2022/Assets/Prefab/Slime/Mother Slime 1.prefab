@@ -82,8 +82,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e99a6fd7aad4a43bef0d0e543af8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 5
   target: {fileID: 8571541159014771274, guid: 7bb65debe027cdd47b944543575938cc, type: 3}
-  health: 0
+  destination: {x: 0, y: 0, z: 0}
+  agent: {fileID: 0}
+  damage: 5
+  soundManager: {fileID: 0}
   canSpawn: 1
   timeBetweenSpawns: 8
   motherSlime: {fileID: 5805897450883225204}

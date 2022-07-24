@@ -31,6 +31,7 @@ public class MotherSlime : Slime
             case 1:
                 newEnemy = (GameObject)Instantiate(motherSlime, spawnPoint, spawnRoation);
                 newEnemy.GetComponent<MotherSlime>().target = target;
+                newEnemy.GetComponent<MotherSlime>().soundManager = soundManager;
                 break;
 
             case 2:
@@ -38,11 +39,13 @@ public class MotherSlime : Slime
             case 4:
                 newEnemy = (GameObject)Instantiate(rangedSlime, spawnPoint, spawnRoation);
                 newEnemy.GetComponent<RangedSlime>().target = target;
+                newEnemy.GetComponent<RangedSlime>().soundManager = soundManager;
                 break;
 
             default:
                 newEnemy = (GameObject)Instantiate(meleeSlime, spawnPoint, spawnRoation);
                 newEnemy.GetComponent<MeleeSlime>().target = target;
+                newEnemy.GetComponent<MeleeSlime>().soundManager = soundManager;
                 break;
         }
         //slimelist.Add(newEnemy);

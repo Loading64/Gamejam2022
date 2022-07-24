@@ -15,6 +15,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip thrusterClip;
     public AudioClip shieldClip;
     public AudioClip shieldbrokenClip;
+    // Slime Clips
+    public AudioClip bonkClip;
     void Awake()
     {
         Instance = this;
@@ -39,7 +41,9 @@ public class SoundManager : MonoBehaviour
             case "Charge rifle":
                 PlaySound(chargerifleClip);
                 break;
-
+            case "Bonk":
+                PlaySound(bonkClip);
+                break;
             default:
                 Debug.Log("Attack Sound Broke");
                 break;

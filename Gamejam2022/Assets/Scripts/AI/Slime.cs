@@ -11,6 +11,7 @@ public class Slime : MonoBehaviour
     public Vector3 destination;
     public NavMeshAgent agent;
     public int damage;
+    public SoundManager soundManager;
     void Start()
     {
         // Cache agent component and destination
@@ -43,6 +44,7 @@ public class Slime : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            soundManager.PlayAttackSound("Bonk");
             collision.gameObject.GetComponent<PlayerHealth>().TakenDamage(damage);
         }
     }
